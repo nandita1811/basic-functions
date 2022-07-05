@@ -1,0 +1,19 @@
+ int findNumbers(vector<int>& nums) {
+        int n = nums.size();
+        int i = 0;
+        int count = 0;
+        while(i<n)
+        {
+            int no_of_dig = 0;
+            while(nums[i]!=0)
+            {
+                nums[i] = nums[i]/10;
+                no_of_dig++;
+            }
+            if(no_of_dig % 2==0)
+                ++count;
+                i++;
+            
+        }
+        return count;
+    }
